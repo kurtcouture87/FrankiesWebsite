@@ -1,348 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Frankie Dunne | Jivamukti Yoga Teacher &amp; Studio Operations Specialist Paris</title>
-  <meta name="description" content="800-hour certified Jivamukti Yoga teacher and studio operations specialist in Paris. Offering public group classes, privates, corporate sessions, and studio growth consulting.">
-  <meta name="keywords" content="Jivamukti Yoga, Paris Yoga Teacher, Studio Operations Specialist, Frankie Dunne, Yoga Studio Consulting, Yoga Paris">
-  
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frankie Dunne | Jivamukti Teacher &amp; Yoga Studio Consultant</title>
+<meta name="description" content="800-hour certified Jivamukti Yoga teacher and studio operations specialist. Public classes, privates, corporate sessions, and studio management &amp; growth consulting in Paris.">
+<style>
+  /* Palette and type extracted verbatim from the original document */
+  :root{
+    --terracotta:#ce5534;
+    --cream:#fcfaf5;
+    --ink:#202223;
+    --grey:#3a3c3f;
+    --white:#ffffff;
+    --sage-light:#eef0ea;
+    --sage:#4e5a48;
+    --rose:#dd7777;
+    --border:#dbded9;
+    --gold:#e1a125;
+    --font:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font);
+    background-color:var(--cream);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+
+  /* ---------- Nav (on cream) ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background-color:var(--cream);
+    border-bottom:1px solid var(--border);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0;flex-wrap:wrap}
+  .brand{
+    font-size:20px;line-height:32px;font-weight:700;
+    color:var(--terracotta);text-decoration:none;white-space:nowrap;
+  }
+  .nav-links{display:flex;gap:28px;list-style:none;flex-wrap:wrap}
+  .nav-links a{
+    font-size:15px;line-height:24px;color:var(--ink);text-decoration:none;
+  }
+  .nav-links a:hover{color:var(--terracotta)}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-block;
+    background-color:var(--ink);color:var(--white);
+    font-size:16px;line-height:25.6px;font-weight:700;
+    text-decoration:none;padding:14px 34px;
+  }
+  .btn:hover{opacity:.85}
+  .btn-plain{
+    display:inline-block;
+    background-color:transparent;color:var(--ink);
+    font-size:16px;line-height:25.6px;font-weight:700;
+    text-decoration:none;padding:14px 34px;
+  }
+  .btn-plain:hover{text-decoration:underline}
+
+  /* ---------- Hero (on cream) ---------- */
+  .hero{padding:80px 0 96px}
+  .hero h1{
+    font-size:40px;line-height:48px;font-weight:700;
+    color:var(--ink);margin-bottom:24px;
+  }
+  .hero p{
+    font-size:17px;line-height:27.2px;font-weight:400;
+    color:var(--grey);margin-bottom:32px;max-width:70ch;
+  }
+
+  /* ---------- About (terracotta background) ---------- */
+  #about{background-color:var(--terracotta);color:var(--cream);padding:80px 0}
+  #about h2{
+    font-size:32px;line-height:38.4px;font-weight:700;
+    color:var(--cream);margin-bottom:16px;
+  }
+  #about p.intro{font-size:12px;line-height:19.2px;color:var(--cream);margin-bottom:32px;max-width:80ch}
+  #about ul{list-style-type:disc;padding-left:20px;max-width:80ch}
+  #about li{
+    font-size:17px;line-height:27.2px;color:var(--cream);margin-bottom:20px;
+  }
+  #about li:last-child{margin-bottom:0}
+
+  /* ---------- Operations (light sage background) ---------- */
+  #operations{background-color:var(--sage-light);padding:80px 0}
+  #operations h2{
+    font-size:36px;line-height:43.2px;font-weight:700;
+    color:var(--ink);text-align:center;margin-bottom:16px;
+  }
+  #operations p.sub{
+    font-size:17px;line-height:27.2px;color:var(--grey);
+    text-align:center;margin:0 auto 48px;max-width:80ch;
+  }
+  .cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background-color:var(--white);padding:32px 28px}
+  .card h3{
+    font-size:20px;line-height:24px;font-weight:700;
+    color:var(--terracotta);margin-bottom:16px;
+  }
+  .card ul{list-style-type:none}
+  .card li{
+    font-size:15px;line-height:24px;color:var(--ink);margin-bottom:10px;
+  }
+  .card li:last-child{margin-bottom:0}
+
+  /* ---------- Offerings (on cream) ---------- */
+  #offerings{padding:80px 0}
+  #offerings h2{
+    font-size:18px;line-height:21.6px;font-weight:700;
+    color:var(--ink);margin-bottom:32px;
+  }
+  .cols-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .offering{background-color:var(--white);padding:32px 28px}
+  .offering h3{
+    font-size:20px;line-height:24px;font-weight:700;
+    color:var(--sage);margin-bottom:12px;
+  }
+  .offering p{font-size:12px;line-height:19.2px;color:var(--ink)}
+  .offering.rose{background-color:var(--rose)}
+  .offering.rose h3{color:var(--ink)}
+
+  /* ---------- Schedule (white background) ---------- */
+  #schedule{background-color:var(--white);padding:80px 0}
+  #schedule h2{
+    font-size:36px;line-height:43.2px;font-weight:700;
+    color:var(--ink);text-align:center;margin-bottom:48px;
+  }
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{
+    width:100%;min-width:660px;
+    background-color:var(--white);
+    border:1px solid var(--border);
+    border-collapse:collapse;
+  }
+  th{
+    background-color:var(--sage);color:var(--white);
+    font-size:12px;line-height:19.2px;font-weight:700;
+    text-align:left;padding:18px 24px;white-space:nowrap;
+  }
+  td{padding:18px 24px;vertical-align:middle;border-top:1px solid var(--border)}
+  td .studio{font-size:12px;line-height:19.2px;font-weight:700;color:var(--ink)}
+  td .addr{font-size:10px;line-height:16px;color:var(--ink)}
+  td .cell{font-size:12px;line-height:19.2px;color:var(--ink)}
+
+  /* ---------- Contact (gold background) ---------- */
+  #contact{background-color:var(--gold);padding:80px 0;text-align:center}
+  #contact h2{
+    font-size:36px;line-height:43.2px;font-weight:700;
+    color:var(--ink);margin-bottom:16px;
+  }
+  #contact p.lead{
+    font-size:18px;line-height:28.8px;color:var(--ink);
+    margin:0 auto 32px;max-width:70ch;
+  }
+  .contact-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+  footer{
+    background-color:var(--cream);padding:28px 0;text-align:center;
+    font-size:12px;line-height:19.2px;color:var(--grey);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:900px){
+    .cols-3,.cols-4{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    section{padding:56px 0}
+    .hero{padding:56px 0 64px}
+    .hero h1{font-size:32px;line-height:38.4px}
+    #operations h2,#schedule h2,#contact h2{font-size:28px;line-height:34px}
+    .cols-3,.cols-4{grid-template-columns:1fr}
+  }
+</style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="wrap nav">
-      <a href="#top" class="brand-wrapper">
-        <span class="brand">Frankie Dunne</span>
-        <span class="brand-subtitle">Jivamukti Yoga &amp; Studio Operations</span>
-      </a>
+<header>
+  <nav class="wrap nav">
+    <a href="#top" class="brand">Frankie Dunne</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#operations">Studio Operations</a></li>
+      <li><a href="#offerings">Yoga Offerings</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
+<main id="top">
 
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#operations">Studio Operations</a></li>
-        <li><a href="#offerings">Yoga Offerings</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#contact" class="nav-cta">Work With Me</a></li>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Jivamukti Yoga Teacher &amp; Studio Operations Specialist.</h1>
+      <p>
+        Cultivating wellness spaces through expert guidance and strategic management.
+        As an 800-hour certified Jivamukti Yoga teacher and proactive growth specialist,
+        I streamline the daily operations, marketing and scaling of studios and digital
+        platforms, keeping communities engaged and yoga studios/wellness spaces running smoothly.
+      </p>
+      <a href="#contact" class="btn">Work With Me</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <h2>5 Years of Dedicated Experience</h2>
+      <p class="intro">
+        I lead with a community-first approach, blended with structured, operational
+        precision to elevate yoga and wellness communities.
+      </p>
+      <ul>
+        <li>800-hour certified Jivamukti Yoga teacher</li>
+        <li>Studied with Sharon Gannon, Emma Henry, Yogeswari, Dr Jayashree,
+            Eddie Stern, Stewart Gilchrist and more.</li>
+        <li>Other services include Studio Manager, Operations Coordinator,
+            or Growth Consultant</li>
       </ul>
     </div>
-  </header>
+  </section>
 
-  <main id="top">
+  <!-- OPERATIONS -->
+  <section id="operations">
+    <div class="wrap">
+      <h2>Studio Management &amp; Consulting</h2>
+      <p class="sub">
+        I provide proactive, detail-oriented support to ensure daily logistics run
+        seamlessly while managing targeted marketing initiatives that expand your
+        community and retain existing students or clients.
+      </p>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-text">
-          <div class="hero-badge">
-            <span class="hero-badge-dot"></span>
-            800-Hour Certified Jivamukti Teacher &amp; Studio Specialist
-          </div>
-          <h1>Cultivating Wellness Spaces <span>in Paris</span> &amp; Beyond.</h1>
-          <p>
-            As an 800-hour certified Jivamukti Yoga teacher and proactive growth specialist, I streamline daily studio operations, timetable coordination, and targeted marketing campaigns—keeping communities engaged and yoga studios running seamlessly.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-terracotta">Work With Me</a>
-            <a href="#schedule" class="btn btn-outline">View Class Schedule</a>
-          </div>
+      <div class="cols-3">
+        <div class="card">
+          <h3>Studio Operations</h3>
+          <ul>
+            <li>Bsport &amp; Mindbody administrative mastery</li>
+            <li>Teacher scheduling, timetable planning &amp; coordination</li>
+            <li>Guest teacher hospitality &amp; workshop coordination</li>
+            <li>Streamlined studio administration &amp; cross-team communication</li>
+            <li>Operational organisation &amp; calm crisis management</li>
+          </ul>
         </div>
-
-        <div class="hero-image-wrapper">
-          <div class="hero-image-card">
-            <img src="assets/hero_yoga.jpg" alt="Frankie Dunne teaching Jivamukti Yoga class in a sunlit Paris studio" width="800" height="480">
-          </div>
-          <div class="hero-image-floating-badge">
-            <div class="floating-badge-icon">✦</div>
-            <div class="floating-badge-text">
-              <span class="floating-badge-title">5+ Years Experience</span>
-              <span class="floating-badge-sub">Studio Management &amp; Jivamukti</span>
-            </div>
-          </div>
+        <div class="card">
+          <h3>Marketing &amp; Community Growth</h3>
+          <ul>
+            <li>High-impact email marketing campaigns &amp; newsletters</li>
+            <li>Social media strategy, scheduling &amp; content planning</li>
+            <li>Student outreach, re-engagement &amp; retention support</li>
+            <li>Strategic community growth initiatives</li>
+            <li>Clear, authentic brand communication</li>
+            <li>Website maintenance</li>
+          </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about">
-      <div class="wrap about-grid">
-        <div class="about-portrait-card">
-          <img src="assets/frankie_portrait.jpg" alt="Frankie Dunne Portrait" width="600" height="800">
-        </div>
-
-        <div class="about-content">
-          <span class="section-tag" style="color: var(--gold-light);">Philosophy &amp; Background</span>
-          <h2>5 Years of Dedicated Experience</h2>
-          <p class="about-intro">
-            I lead with a community-first approach, blended with structured operational precision to elevate yoga and wellness communities.
-          </p>
-          <ul class="about-list">
-            <li>
-              <span class="about-list-icon">✓</span>
-              <span><b>800-hour certified Jivamukti Yoga teacher</b> with extensive international training.</span>
-            </li>
-            <li>
-              <span class="about-list-icon">✓</span>
-              <span>Studied directly with renowned teachers: <b>Sharon Gannon, Emma Henry, Yogeswari, Dr Jayashree, Eddie Stern, Stewart Gilchrist</b> and more.</span>
-            </li>
-            <li>
-              <span class="about-list-icon">✓</span>
-              <span>Services encompass <b>Studio Management, Operations Coordination, Timetable Planning</b>, and <b>Growth Consulting</b>.</span>
-            </li>
+        <div class="card">
+          <h3>Systems &amp; Professional Strengths</h3>
+          <ul>
+            <li><b>Platforms:</b> Canva, WordPress, Netlify, Later, Google Workspace including Gemini AI</li>
+            <li>Native English speaker with intermediate French business capabilities</li>
+            <li>Highly adaptable, detail-oriented, and client-focused</li>
+            <li>Strong multitasking abilities tailored for busy studio environments</li>
           </ul>
         </div>
       </div>
-    </section>
-
-    <!-- OPERATIONS SECTION -->
-    <section id="operations">
-      <div class="wrap">
-        <div class="operations-header">
-          <span class="section-tag">Strategic Management</span>
-          <h2 class="section-title">Studio Management &amp; Consulting</h2>
-          <p class="sub">
-            Providing proactive, detail-oriented support to ensure daily logistics run seamlessly while executing targeted marketing initiatives that expand your community and retain existing students.
-          </p>
-        </div>
-
-        <div class="cols-3">
-          <!-- Card 1 -->
-          <div class="card">
-            <div class="card-icon">⚙️</div>
-            <h3>Studio Operations</h3>
-            <ul>
-              <li>Bsport &amp; Mindbody administrative mastery</li>
-              <li>Teacher scheduling, timetable planning &amp; coordination</li>
-              <li>Guest teacher hospitality &amp; workshop coordination</li>
-              <li>Streamlined studio administration &amp; cross-team communication</li>
-              <li>Operational organisation &amp; calm crisis management</li>
-            </ul>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="card">
-            <div class="card-icon">📈</div>
-            <h3>Marketing &amp; Growth</h3>
-            <ul>
-              <li>High-impact email marketing campaigns &amp; newsletters</li>
-              <li>Social media strategy, scheduling &amp; content planning</li>
-              <li>Student outreach, re-engagement &amp; retention support</li>
-              <li>Strategic community growth initiatives</li>
-              <li>Clear, authentic brand communication &amp; website maintenance</li>
-            </ul>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="card">
-            <div class="card-icon">💡</div>
-            <h3>Systems &amp; Strengths</h3>
-            <ul>
-              <li><b>Platforms:</b> Canva, WordPress, Netlify, Later, Google Workspace &amp; Gemini AI</li>
-              <li>Native English speaker with intermediate French business capabilities</li>
-              <li>Highly adaptable, detail-oriented, and client-focused</li>
-              <li>Strong multitasking abilities tailored for busy studio environments</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Banner Feature -->
-        <div class="operations-banner">
-          <div class="operations-banner-content">
-            <span class="section-tag">Consulting Highlight</span>
-            <h3 style="font-size: 32px; margin-bottom: 16px;">Elevate Your Wellness Space</h3>
-            <p style="color: var(--grey); margin-bottom: 24px;">
-              From optimizing software workflows (Bsport, Mindbody) to organizing guest teacher masterclasses, I help studio owners reduce admin overload so they can focus on their teachers and students.
-            </p>
-            <div>
-              <a href="#contact" class="btn btn-terracotta">Book a Consultation</a>
-            </div>
-          </div>
-          <div class="operations-banner-image">
-            <img src="assets/studio_operations.jpg" alt="Paris boutique yoga studio office space" width="600" height="400">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OFFERINGS SECTION -->
-    <section id="offerings">
-      <div class="wrap">
-        <div style="text-align: center; margin-bottom: 48px;">
-          <span class="section-tag">Teaching Services</span>
-          <h2 class="section-title">Yoga Offerings</h2>
-        </div>
-
-        <div class="cols-4">
-          <div class="offering">
-            <div class="offering-icon">🧘‍♀️</div>
-            <h3>Public Group Classes</h3>
-            <p>Vibrant, music-filled Jivamukti sequencing with a spiritual focus, intentional breathwork, and deep attention to alignment details.</p>
-          </div>
-
-          <div class="offering">
-            <div class="offering-icon">🌿</div>
-            <h3>Private One-on-Ones</h3>
-            <p>Tailored individual sessions created to deepen your personal practice, refine technique, or focus on specific physical and alignment goals.</p>
-          </div>
-
-          <div class="offering">
-            <div class="offering-icon">🏢</div>
-            <h3>Corporate Sessions</h3>
-            <p>Bringing mindfulness, breathwork and intentional movement directly to corporate teams to reduce workplace stress and boost physical vitality.</p>
-          </div>
-
-          <div class="offering rose">
-            <div class="offering-icon">✨</div>
-            <h3>Workshops &amp; Retreats</h3>
-            <p>Immersive deep-dive journeys coming later in 2026. Come back soon for upcoming retreat announcements and weekend masterclasses!</p>
-            <span class="offering-badge">Coming Late 2026</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCHEDULE SECTION -->
-    <section id="schedule">
-      <div class="wrap">
-        <div style="text-align: center; margin-bottom: 36px;">
-          <span class="section-tag">Paris Classes</span>
-          <h2 class="section-title">Weekly Studio Schedule</h2>
-        </div>
-
-        <div class="schedule-controls">
-          <div class="filter-pills">
-            <button class="pill-btn active" data-filter="all">All Locations</button>
-            <button class="pill-btn" data-filter="jivamukti-paris">Jivamukti Yoga Paris</button>
-            <button class="pill-btn" data-filter="yog-matcha">Yog&amp;Matcha</button>
-          </div>
-          <span style="font-size: 13px; color: var(--grey-light);">Paris Time (CET)</span>
-        </div>
-
-        <div class="schedule-table-card">
-          <div class="table-scroll">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Location &amp; Address</th>
-                  <th scope="col">Class Focus</th>
-                  <th scope="col">Booking Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="schedule-row" data-studio="jivamukti-paris">
-                  <td>
-                    <p class="studio">Jivamukti Yoga Paris</p>
-                    <p class="addr">Canal Saint-Martin, 75010 Paris</p>
-                  </td>
-                  <td><p class="cell">Jivamukti Open / Spiritual Warrior</p></td>
-                  <td>
-                    <a href="#book" class="btn btn-outline table-btn book-class-btn" data-studio-name="Jivamukti Yoga Paris" data-class-name="Jivamukti Open / Spiritual Warrior">Book Class</a>
-                  </td>
-                </tr>
-                <tr class="schedule-row" data-studio="yog-matcha">
-                  <td>
-                    <p class="studio">Yog&amp;Matcha</p>
-                    <p class="addr">Rue Mazarine, 75006 Paris</p>
-                  </td>
-                  <td><p class="cell">Jivamukti Open / Alignment Focus</p></td>
-                  <td>
-                    <a href="#book" class="btn btn-outline table-btn book-class-btn" data-studio-name="Yog&amp;Matcha" data-class-name="Jivamukti Open / Alignment Focus">Book Class</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-      <div class="wrap">
-        <div class="contact-card">
-          <span class="section-tag">Get In Touch</span>
-          <h2>Let's Collaborate</h2>
-          <p class="lead">
-            Whether you'd like to book a private session, attend a public class, or discuss how I can optimize and grow your wellness space or studio operations, let's connect.
-          </p>
-
-          <div class="contact-actions">
-            <a class="btn btn-terracotta" href="https://www.instagram.com/francescajivamukti/" target="_blank" rel="noopener">Follow on Instagram</a>
-            <a class="btn btn-outline" href="mailto:kurtcouture87@gmail.com">Send Direct Email</a>
-          </div>
-
-          <form id="inquiry-form" class="contact-form">
-            <div class="form-group">
-              <label for="contact-name">Your Name</label>
-              <input type="text" id="contact-name" name="name" placeholder="First & Last Name" required>
-            </div>
-            <div class="form-group">
-              <label for="contact-email">Email Address</label>
-              <input type="email" id="contact-email" name="email" placeholder="name@example.com" required>
-            </div>
-            <div class="form-group full">
-              <label for="contact-subject">Inquiry Type</label>
-              <select id="contact-subject" name="subject">
-                <option value="studio-consulting">Studio Operations &amp; Growth Consulting</option>
-                <option value="private-class">Private / Corporate Yoga Class</option>
-                <option value="general">General Connection</option>
-              </select>
-            </div>
-            <div class="form-group full">
-              <label for="contact-message">Message</label>
-              <textarea id="contact-message" name="message" rows="4" placeholder="Tell me about your studio or class request..." required></textarea>
-            </div>
-            <div class="form-group full" style="margin-top: 8px;">
-              <button type="submit" class="btn btn-terracotta" style="width: 100%;">Submit Inquiry</button>
-            </div>
-            <div id="form-success-msg" style="display: none; grid-column: span 2; padding: 12px; background-color: var(--sage-light); color: var(--sage-dark); border-radius: var(--radius-sm); font-weight: 600; text-align: center; margin-top: 8px;">
-              ✓ Thank you! Your message has been sent. Frankie will get back to you shortly.
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- BOOKING MODAL -->
-  <div id="booking-modal" class="modal-backdrop" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-studio-name">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <span class="section-tag">Direct Studio Portal</span>
-      <h3 id="modal-studio-name">Studio Portal</h3>
-      <p id="modal-class-title">Jivamukti Open</p>
-      <div style="background-color: var(--cream); padding: 16px; border-radius: var(--radius-sm); margin-bottom: 24px;">
-        <p style="font-size: 14px; color: var(--ink); margin-bottom: 0;">
-          Class bookings are managed directly through the studio partner portal. Click below to open the schedule and reserve your mat.
-        </p>
-      </div>
-      <a href="#contact" class="btn btn-terracotta" style="width: 100%; text-align: center;" onclick="document.getElementById('booking-modal').classList.remove('active');">Proceed to Booking Portal</a>
     </div>
-  </div>
+  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap footer-content">
-      <div class="footer-brand">Frankie Dunne</div>
-      <ul class="footer-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#operations">Studio Operations</a></li>
-        <li><a href="#offerings">Yoga Offerings</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="copyright">
-        &copy; <span id="year">2026</span> Frankie Dunne &middot; Jivamukti Yoga &middot; Paris, France
+  <!-- OFFERINGS -->
+  <section id="offerings">
+    <div class="wrap">
+      <h2>Yoga Offerings</h2>
+
+      <div class="cols-4">
+        <div class="offering">
+          <h3>Public Group Classes</h3>
+          <p>Vibrant, music-filled Jivamukti sequencing with a spiritual focus,
+             breathwork, and attention to alignment details.</p>
+        </div>
+        <div class="offering">
+          <h3>Private One-on-Ones</h3>
+          <p>Tailored individual sessions created to deepen your personal practice
+             or focus on specific alignment goals.</p>
+        </div>
+        <div class="offering">
+          <h3>Corporate Sessions</h3>
+          <p>Bringing mindfulness, breath and intentional movement to teams to
+             reduce stress and boost physical vitality.</p>
+        </div>
+        <div class="offering rose">
+          <h3>Workshops &amp; Retreats</h3>
+          <p>Immersive deep-dive journeys coming later in 2026.
+             Come back soon for announcements!</p>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="main.js"></script>
+  <!-- SCHEDULE -->
+  <section id="schedule">
+    <div class="wrap">
+      <h2>Weekly Studio Schedule</h2>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Location</th>
+              <th scope="col">Class Focus</th>
+              <th scope="col">How to Join</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p class="studio">Jivamukti Yoga Paris</p>
+                <p class="addr">Canal Saint-Martin</p>
+              </td>
+              <td><p class="cell">Jivamukti Open / Spiritual Warrior</p></td>
+              <td><p class="cell">Book directly via the studio portal</p></td>
+            </tr>
+            <tr>
+              <td>
+                <p class="studio">Yog&amp;Matcha</p>
+                <p class="addr">Rue Mazarine, 75006</p>
+              </td>
+              <td><p class="cell">Jivamukti Open / Alignment Focus</p></td>
+              <td><p class="cell">Book directly via the studio portal</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <h2>Let's Collaborate</h2>
+      <p class="lead">
+        Whether you'd like to book a private session, attend a public class, or discuss
+        how I can optimise and grow your wellness space or studio operations, let's connect.
+      </p>
+      <div class="contact-actions">
+        <a class="btn" href="https://www.instagram.com/francescajivamukti/" target="_blank" rel="noopener">Follow on Instagram</a>
+        <a class="btn-plain" href="mailto:kurtcouture87@gmail.com">Get in Touch via Email</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="year">2026</span> Frankie Dunne &middot; Jivamukti Yoga &middot; Paris</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
