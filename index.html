@@ -66,6 +66,7 @@
 
   /* ---------- Hero (on cream) ---------- */
   .hero{padding:80px 0 96px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center}
   .hero h1{
     font-size:40px;line-height:48px;font-weight:700;
     color:var(--ink);margin-bottom:24px;
@@ -74,6 +75,14 @@
     font-size:17px;line-height:27.2px;font-weight:400;
     color:var(--grey);margin-bottom:32px;max-width:70ch;
   }
+  .hero-image img{
+    width:100%;max-height:500px;object-fit:cover;display:block;
+    border-radius:4px;
+  }
+
+  /* ---------- Full Window Banner ---------- */
+  .full-banner{width:100%;height:520px;overflow:hidden;position:relative}
+  .full-banner img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 
   /* ---------- About (terracotta background) ---------- */
   #about{background-color:var(--terracotta);color:var(--cream);padding:80px 0}
@@ -168,7 +177,8 @@
 
   /* ---------- Responsive ---------- */
   @media(max-width:900px){
-    .cols-3,.cols-4{grid-template-columns:1fr 1fr}
+    .cols-3,.cols-4,.hero-grid{grid-template-columns:1fr}
+    .full-banner{height:360px}
   }
   @media(max-width:640px){
     section{padding:56px 0}
@@ -198,15 +208,20 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap">
-      <h1>Jivamukti Yoga Teacher &amp; Studio Operations Specialist.</h1>
-      <p>
-        Cultivating wellness spaces through expert guidance and strategic management.
-        As an 800-hour certified Jivamukti Yoga teacher and proactive growth specialist,
-        I streamline the daily operations, marketing and scaling of studios and digital
-        platforms, keeping communities engaged and yoga studios/wellness spaces running smoothly.
-      </p>
-      <a href="#contact" class="btn">Work With Me</a>
+    <div class="wrap hero-grid">
+      <div class="hero-content">
+        <h1>Jivamukti Yoga Teacher &amp; Studio Operations Specialist.</h1>
+        <p>
+          Cultivating wellness spaces through expert guidance and strategic management.
+          As an 800-hour certified Jivamukti Yoga teacher and proactive growth specialist,
+          I streamline the daily operations, marketing and scaling of studios and digital
+          platforms, keeping communities engaged and yoga studios/wellness spaces running smoothly.
+        </p>
+        <a href="#contact" class="btn">Work With Me</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero_photo.jpg" alt="Frankie Dunne - Jivamukti Yoga Teacher & Studio Operations Specialist">
+      </div>
     </div>
   </section>
 
@@ -226,6 +241,11 @@
             or Growth Consultant</li>
       </ul>
     </div>
+  </section>
+
+  <!-- FULL WINDOW BANNER PHOTO -->
+  <section class="full-banner">
+    <img src="assets/fullwidth_banner.jpg" alt="Frankie Dunne Jivamukti Yoga Studio & Community">
   </section>
 
   <!-- OPERATIONS -->
